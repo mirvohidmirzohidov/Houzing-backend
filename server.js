@@ -15,6 +15,10 @@ app.get("/", (req, res) => {
     res.send("Backend ishlayapti! 🚀");
 });
 
+const cors = require('cors');
+app.use(cors());
+
+
 // ✅ Static fayllar uchun favicon 404 xatosini oldini olish
 app.get('/favicon.ico', (req, res) => res.status(204));
 
